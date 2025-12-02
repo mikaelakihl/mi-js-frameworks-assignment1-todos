@@ -1,47 +1,65 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Tfc19Mhg)
-# Inlämningsuppgift Todo
+# Todo Application
 
-I denna inlämningsuppgift kommer ni att skapa er egen todo-lista.
-Sidan skall visa ett antal punkter som skall göras. Dessa skall då komma upp på skärmen i form av en lista. När uppgiften är slutförd skall användaren kunna markera uppgiften som slutförd och uppgiften skall då tas bort från listan.
+This project was developed as a school project at Medieinstitutet. A client-side Todo Application built with React and TypeScript. It allows users to manage tasks, track their progress, and categorize them by emotion.
 
-## Betyg G
+The core objective of this assignment was to work with React components and state management, specifically implementing features like "Lifting State Up" and CRUD operations. This was the first experience creating an application with React, with the ambition of creating a smoother and more intuitive task management experience.
 
-- Skapa en hårdkodad lista med punkter att göra (hitta på egna punkter, dessa skall inte bara vara en text)
-- Presentera listan på skärmen, helst med lite kontroll. Detta betyder i en html-struktur t.ex. i en ul/li-lista
-- Implementera klickhändelse för att hantera borttagandet av en todo.
-- Todo markeras som klar på skärmen och markeras som klar i javascript-listan.
-- Ni behöver använda localStorage så att listan inte börjar om från början varje gång sidan används.
-- Ni behöver använda er av en komponent.
-- Ni behöver använda er av state med en lista med objekt.
+State regarding todos is persisted to `localStorage`, ensuring that user tasks survive page reloads. The main focus lies in state management, component structure, and user interface design.
 
-## Betyg VG
+## 📋 Project overview
 
-- Alla punkter under G
-- Kunna visa även klara händelser och klicka tillbaka den så att de blir oklara igen.
-- Skapa ett formulär som tillåter att en användare skapar nya todos efterhand.
-- Kunna sortera ordningen på dina todos.
-- Implementera ett valfritt grafiskt ramverk, t.ex. tailwind eller material ui.
-- Ni behöver ha minst tre komponenter.
-- Ni måste använda Lifting State Up.
+The app manages a list of tasks and handles user interactions locally. It consists of:
 
-## Allmänt
+- **Todo List** – Active tasks with filtering and sorting options.
+- **Finished Todos** – Completed tasks history.
+- **Todo Form** – Interface to add new tasks with emotion categories.
 
-Projektet ni har är ett vite-projekt. D.v.s. ni måste köra:
+Users can:
 
-```shell
-npm i
+- Add new todos with an associated emotion (Fun, Stressful, Important, Boring).
+- Mark todos as complete or incomplete.
+- Delete todos (with confirmation for active ones).
+- Filter todos by emotion.
+- Sort todos by creation order.
+- Persist data: Todos are saved locally.
+
+## ✨ Features
+
+- **Task Management**: Create, read, update (toggle status), and delete todos.
+- **Categorization**: Assign emotions/categories to tasks.
+- **Local Persistence**:
+  - Saves the todo list to `localStorage` (`todos`).
+- **Search & Filtering**:
+  - Filter by Emotion (Fun, Stressful, Important, Boring).
+  - Sort by Date (Newest/Oldest).
+- **Visual Feedback**: Icons for actions and emotions using `lucide-react`.
+- **Responsive UI**: Built with TailwindCSS for a mobile-friendly design.
+
+## 🧰 Tech Stack
+
+- React
+- TypeScript
+- TailwindCSS
+- Vite
+- Lucide React
+- NPM
+- ESLint
+
+## 🚀 Installation
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install dependencies
+
+```bash
+npm install
 ```
 
-och
+### Run the App
 
-```shell
-npm run dev 
+```bash
+npm run dev
 ```
-
-för att köra projektet.
-
-- Det finns många sätt att lösa denna uppgift på. Om ni känner er osäkra på någonting, fråga hellre någon gång för mycket så att ni känner er säkra på vad ni utvecklar.
-- Ni får gärna ändra strukturen i projektet, detta är bara en grund.
-- Börja med att planera ert arbete, börja inte med Visual Studio Code, även om det är lockande.
-- Gör ert bästa att inte stressa. Lättare sagt än gjort, jag vet. Men ingen mår bättre av att stressa.
-- Ha roligt, skratta när det blir fel och fortsätt att vara nyfiken :)
